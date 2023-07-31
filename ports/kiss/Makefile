@@ -14,7 +14,7 @@ BOARD_DIR := $(SEL4CP_SDK)/board/$(SEL4CP_BOARD)/$(SEL4CP_CONFIG)
 SEL4CP_TOOL := $(SEL4CP_SDK)/bin/sel4cp
 
 # Set CFLAGS and libraries.
-CFLAGS += -I. -I$(BUILD) -I$(TOP) -I$(BOARD_DIR)/include -nostdlib -ffreestanding -mcpu=$(CPU)
+CFLAGS += -I. -I$(BUILD) -I$(TOP) -I$(BOARD_DIR)/include -nostdlib -ffreestanding -mtune=$(CPU)
 LDFLAGS += -L$(BOARD_DIR)/lib -nostdlib
 LIBS += -lm -lsel4cp -Tsel4cp.ld
 
